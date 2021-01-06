@@ -25,6 +25,14 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    
+    <!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
+	<dependency>
+    	<groupId>com.itextpdf</groupId>
+    	<artifactId>itextpdf</artifactId>
+    	<version>5.5.13.1</version>
+	</dependency>
+    
   </dependencies>
 
   <build>
@@ -69,7 +77,21 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+        
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <!-- or whatever version you use -->
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+      
       </plugins>
+      
+
+      
     </pluginManagement>
   </build>
 </project>
